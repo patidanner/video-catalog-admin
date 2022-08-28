@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Creates main app modules with its dependencies">
+    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Category domain init">
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/AggregateRoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Identifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/ValueObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/main/java/com/stream/video/catalog/application/UseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/main/java/com/stream/video/catalog/application/UseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/src/test/java/com/stream/video/catalog/application/UseCaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/application/src/test/java/com/stream/video/catalog/application/UseCaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661726685030</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Category domain init">
+      <created>1661728426908</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661728426908</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +237,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initializing project video catalog admin" />
     <MESSAGE value="Creates main app modules with its dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creates main app modules with its dependencies" />
+    <MESSAGE value="Category domain init" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category domain init" />
   </component>
 </project>
