@@ -1,2 +1,7 @@
 rootProject.name = 'video-catalog-admin'
+include 'domain'
+include 'application'
+include 'infrastructure'
+include 'infrastructure:test'
+findProject(':infrastructure:test')?.name = 'test'
 
