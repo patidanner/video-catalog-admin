@@ -1,10 +1,10 @@
 package com.stream.video.catalog.domain.category;
 
-import java.time.Instant;
-import java.util.UUID;
+import com.stream.video.catalog.domain.AggregateRoot;
 
-public class Category {
-    private String id;
+import java.time.Instant;
+
+public class Category extends AggregateRoot<CategoryID> {
     private String name;
     private String description;
     private boolean active;
@@ -15,23 +15,15 @@ public class Category {
     public Category(
             final String name,
             final String description,
-            final boolean active
+            final boolean isActive
     ) {
-        this.id = UUID.randomUUID().toString();
+        super(CategoryID.unique());
         this.name = name;
         this.description = description;
-        this.active = active;
+        this.active = isActive;
         this.createdAt = Instant.now();
         this.updatedAt = Instant.now();
         this.deletedAt = null;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

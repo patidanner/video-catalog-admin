@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Category domain init">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/AggregateRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Identifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/ValueObject.java" afterDir="false" />
+    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Category aggregate identifier impl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,15 +57,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "17 (WSL)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17 (WSL)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\pdanner\dev-projects\video-catalog-admin\infrastructure" />
@@ -220,7 +217,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661728426908</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="DDD definitions init">
+      <created>1661729500815</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661729500815</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Category aggregate identifier impl">
+      <created>1663634178819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663634178819</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -238,6 +249,8 @@
     <MESSAGE value="Initializing project video catalog admin" />
     <MESSAGE value="Creates main app modules with its dependencies" />
     <MESSAGE value="Category domain init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category domain init" />
+    <MESSAGE value="DDD definitions init" />
+    <MESSAGE value="Category aggregate identifier impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category aggregate identifier impl" />
   </component>
 </project>
