@@ -1,6 +1,7 @@
 package com.stream.video.catalog.domain.category;
 
 import com.stream.video.catalog.domain.AggregateRoot;
+import com.stream.video.catalog.domain.validation.ValidationHandler;
 
 import java.time.Instant;
 
@@ -74,4 +75,9 @@ public class Category extends AggregateRoot<CategoryID> {
         this.deletedAt = deletedAt;
     }
 
+
+    @Override
+    public void validate(final ValidationHandler handler) {
+        new CategoryValidator(this, handler).validate();
+    }
 }
