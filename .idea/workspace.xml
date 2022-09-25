@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Category aggregate identifier impl">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/CategoryValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/DomainException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/validation/Error.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/validation/ValidationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/validation/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/validation/handler/ThrowsValidationHandler.java" afterDir="false" />
+    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Initial validators impl">
+      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/NoStackTraceException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/AggregateRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/AggregateRoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/DomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/DomainException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +73,7 @@
       <recent name="\\wsl$\Ubuntu\home\pdanner\dev-projects\video-catalog-admin\infrastructure" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CategoryTest.givenAnInvalidNullName_whenCallNewCategoryAndValidate_thenShouldRaiseException">
+  <component name="RunManager" selected="Gradle.CategoryTest">
     <configuration name="CategoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CategoryTest" />
         <item itemvalue="Gradle.CategoryTest.givenAnInvalidNullName_whenCallNewCategoryAndValidate_thenShouldRaiseException" />
         <item itemvalue="Gradle.CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory" />
         <item itemvalue="Gradle.MainTest.testMain" />
         <item itemvalue="Gradle.UseCaseTest.testCreateUserCase" />
-        <item itemvalue="Gradle.CategoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663635219449</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Initial validators impl">
+      <created>1663814153520</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663814153520</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +277,8 @@
     <MESSAGE value="Category domain init" />
     <MESSAGE value="DDD definitions init" />
     <MESSAGE value="Category aggregate identifier impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category aggregate identifier impl" />
+    <MESSAGE value="Initial validators impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial validators impl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -287,6 +287,11 @@
           <url>file://$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/validation/handler/ThrowsValidationHandler.java</url>
           <line>22</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/validation/handler/ThrowsValidationHandler.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
