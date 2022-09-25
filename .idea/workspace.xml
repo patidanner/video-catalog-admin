@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="No stack trace exception impl">
+    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Extra Category validations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/CategoryValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/CategoryValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +73,8 @@
       <recent name="\\wsl$\Ubuntu\home\pdanner\dev-projects\video-catalog-admin\infrastructure" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CategoryTest">
-    <configuration name="CategoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.CategoryTest.givenAnIvalidCategory_whenCallUpdate_thenReturnCategoryUpdated">
+    <configuration name="CategoryTest.givenAValidCategory_whenCallDeactivate_thenReturnCategoryInactive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -87,7 +87,7 @@
           <list>
             <option value=":domain:test" />
             <option value="--tests" />
-            <option value="&quot;com.stream.video.catalog.domain.CategoryTest&quot;" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidCategory_whenCallDeactivate_thenReturnCategoryInactive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -97,7 +97,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAValidEmptyDescription_whenCallNewCategoryAndValidate_thenCreateCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryTest.givenAValidCategory_whenCallUpdateInactive_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -110,7 +110,7 @@
           <list>
             <option value=":domain:test" />
             <option value="--tests" />
-            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidEmptyDescription_whenCallNewCategoryAndValidate_thenCreateCategory&quot;" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidCategory_whenCallUpdateInactive_thenReturnCategoryUpdated&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -120,7 +120,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryTest.givenAValidCategory_whenCallUpdate_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -133,7 +133,7 @@
           <list>
             <option value=":domain:test" />
             <option value="--tests" />
-            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory&quot;" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidCategory_whenCallUpdate_thenReturnCategoryUpdated&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -143,7 +143,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAnInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldRaiseException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryTest.givenAValidInactiveCategory_whenCallActivate_thenReturnCategoryActive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -156,7 +156,7 @@
           <list>
             <option value=":domain:test" />
             <option value="--tests" />
-            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAnInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldRaiseException&quot;" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidInactiveCategory_whenCallActivate_thenReturnCategoryActive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -166,7 +166,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CategoryTest.givenAnInvalidNullName_whenCallNewCategoryAndValidate_thenShouldRaiseException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CategoryTest.givenAnIvalidCategory_whenCallUpdate_thenReturnCategoryUpdated" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -179,7 +179,7 @@
           <list>
             <option value=":domain:test" />
             <option value="--tests" />
-            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAnInvalidNullName_whenCallNewCategoryAndValidate_thenShouldRaiseException&quot;" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAnIvalidCategory_whenCallUpdate_thenReturnCategoryUpdated&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -191,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CategoryTest" />
-        <item itemvalue="Gradle.CategoryTest.givenAValidEmptyDescription_whenCallNewCategoryAndValidate_thenCreateCategory" />
-        <item itemvalue="Gradle.CategoryTest.givenAnInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldRaiseException" />
-        <item itemvalue="Gradle.CategoryTest.givenAnInvalidNullName_whenCallNewCategoryAndValidate_thenShouldRaiseException" />
-        <item itemvalue="Gradle.CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory" />
+        <item itemvalue="Gradle.CategoryTest.givenAnIvalidCategory_whenCallUpdate_thenReturnCategoryUpdated" />
+        <item itemvalue="Gradle.CategoryTest.givenAValidCategory_whenCallUpdateInactive_thenReturnCategoryUpdated" />
+        <item itemvalue="Gradle.CategoryTest.givenAValidCategory_whenCallUpdate_thenReturnCategoryUpdated" />
+        <item itemvalue="Gradle.CategoryTest.givenAValidInactiveCategory_whenCallActivate_thenReturnCategoryActive" />
+        <item itemvalue="Gradle.CategoryTest.givenAValidCategory_whenCallDeactivate_thenReturnCategoryInactive" />
       </list>
     </recent_temporary>
   </component>
@@ -264,7 +264,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664129641334</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Extra Category validations">
+      <created>1664131688161</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664131688161</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Extra Category validations">
+      <created>1664131757221</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664131757221</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,7 +300,8 @@
     <MESSAGE value="Category aggregate identifier impl" />
     <MESSAGE value="Initial validators impl" />
     <MESSAGE value="No stack trace exception impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="No stack trace exception impl" />
+    <MESSAGE value="Extra Category validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extra Category validations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

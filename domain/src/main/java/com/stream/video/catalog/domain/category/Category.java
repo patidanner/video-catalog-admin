@@ -8,7 +8,7 @@ import java.time.Instant;
 public class Category extends AggregateRoot<CategoryID> {
     private String name;
     private String description;
-    private boolean active;
+    private boolean isActive;
     private Instant createdAt;
     private Instant updatedAt;
     private Instant deletedAt;
@@ -21,10 +21,49 @@ public class Category extends AggregateRoot<CategoryID> {
         super(CategoryID.unique());
         this.name = name;
         this.description = description;
-        this.active = isActive;
+        this.isActive = isActive;
         this.createdAt = Instant.now();
         this.updatedAt = Instant.now();
+        this.deletedAt = this.isActive() ? null : Instant.now();
+    }
+
+    @Override
+    public void validate(final ValidationHandler handler) {
+        new CategoryValidator(this, handler).validate();
+    }
+
+    public Category deactivate() {
+        if (getDeletedAt() == null) {
+            this.deletedAt = Instant.now();
+        }
+
+        this.isActive = false;
+        this.updatedAt = Instant.now();
+
+        return this;
+    }
+
+    public Category activate() {
         this.deletedAt = null;
+        this.isActive = true;
+        this.updatedAt = Instant.now();
+
+        return this;
+    }
+
+    public Category update (final String name, final String description, final boolean isActive) {
+        this.name = name;
+        this.description = description;
+        this.isActive = isActive;
+        if (isActive) {
+            this.activate();
+        } else {
+            this.deactivate();
+        }
+
+        this.updatedAt = Instant.now();
+
+        return this;
     }
 
     public String getName() {
@@ -44,11 +83,11 @@ public class Category extends AggregateRoot<CategoryID> {
     }
 
     public boolean isActive() {
-        return active;
+        return isActive;
     }
 
     public void setActive(boolean active) {
-        this.active = active;
+        this.isActive = active;
     }
 
     public Instant getCreatedAt() {
@@ -75,9 +114,4 @@ public class Category extends AggregateRoot<CategoryID> {
         this.deletedAt = deletedAt;
     }
 
-
-    @Override
-    public void validate(final ValidationHandler handler) {
-        new CategoryValidator(this, handler).validate();
-    }
 }
