@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="Initial validators impl">
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/NoStackTraceException.java" afterDir="false" />
+    <list default="true" id="ff3ac65e-7404-4b64-982c-0cf48219b75e" name="Changes" comment="No stack trace exception impl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/DomainException.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/exceptions/DomainException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/CategoryValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/stream/video/catalog/domain/category/CategoryValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/stream/video/catalog/domain/CategoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +97,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="CategoryTest.givenAValidEmptyDescription_whenCallNewCategoryAndValidate_thenCreateCategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":domain:test" />
+            <option value="--tests" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidEmptyDescription_whenCallNewCategoryAndValidate_thenCreateCategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -111,6 +134,29 @@
             <option value=":domain:test" />
             <option value="--tests" />
             <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CategoryTest.givenAnInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldRaiseException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":domain:test" />
+            <option value="--tests" />
+            <option value="&quot;com.stream.video.catalog.domain.CategoryTest.givenAnInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldRaiseException&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -143,59 +189,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainTest.testMain" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":infrastructure:test" />
-            <option value="--tests" />
-            <option value="&quot;MainTest.testMain&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="UseCaseTest.testCreateUserCase" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":application:test" />
-            <option value="--tests" />
-            <option value="&quot;com.stream.video.catalog.application.UseCaseTest.testCreateUserCase&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CategoryTest" />
+        <item itemvalue="Gradle.CategoryTest.givenAValidEmptyDescription_whenCallNewCategoryAndValidate_thenCreateCategory" />
+        <item itemvalue="Gradle.CategoryTest.givenAnInvalidEmptyName_whenCallNewCategoryAndValidate_thenShouldRaiseException" />
         <item itemvalue="Gradle.CategoryTest.givenAnInvalidNullName_whenCallNewCategoryAndValidate_thenShouldRaiseException" />
         <item itemvalue="Gradle.CategoryTest.givenAValidParam_whenCallNewCategory_thenInstantiateACategory" />
-        <item itemvalue="Gradle.MainTest.testMain" />
-        <item itemvalue="Gradle.UseCaseTest.testCreateUserCase" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663814153520</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="No stack trace exception impl">
+      <created>1664129641334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664129641334</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -278,7 +285,8 @@
     <MESSAGE value="DDD definitions init" />
     <MESSAGE value="Category aggregate identifier impl" />
     <MESSAGE value="Initial validators impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial validators impl" />
+    <MESSAGE value="No stack trace exception impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="No stack trace exception impl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
