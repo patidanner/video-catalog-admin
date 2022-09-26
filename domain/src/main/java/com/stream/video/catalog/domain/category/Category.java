@@ -4,6 +4,7 @@ import com.stream.video.catalog.domain.AggregateRoot;
 import com.stream.video.catalog.domain.validation.ValidationHandler;
 
 import java.time.Instant;
+import java.util.Objects;
 
 public class Category extends AggregateRoot<CategoryID> {
     private String name;
@@ -13,18 +14,29 @@ public class Category extends AggregateRoot<CategoryID> {
     private Instant updatedAt;
     private Instant deletedAt;
 
-    public Category(
+    private Category(
+            final CategoryID id,
             final String name,
             final String description,
-            final boolean isActive
+            final boolean isActive,
+            final Instant creationDate,
+            final Instant updateDate,
+            final Instant deleteDate
     ) {
-        super(CategoryID.unique());
+        super(id);
         this.name = name;
         this.description = description;
         this.isActive = isActive;
-        this.createdAt = Instant.now();
-        this.updatedAt = Instant.now();
-        this.deletedAt = this.isActive() ? null : Instant.now();
+        this.createdAt = Objects.requireNonNull(creationDate, "'createdAt' should not be null");
+        this.updatedAt = Objects.requireNonNull(updateDate, "'updatedAt' should not be null");
+        this.deletedAt = deleteDate;
+    }
+
+    public static Category newCategory(final String aName, final String aDescription, final boolean isActive) {
+        final var id = CategoryID.unique();
+        final var now = Instant.now();
+        final var deletedAt = isActive ? null : now;
+        return new Category(id, aName, aDescription, isActive, now, now, deletedAt);
     }
 
     @Override
@@ -66,6 +78,9 @@ public class Category extends AggregateRoot<CategoryID> {
         return this;
     }
 
+    public CategoryID getId() {
+        return id;
+    }
     public String getName() {
         return name;
     }
