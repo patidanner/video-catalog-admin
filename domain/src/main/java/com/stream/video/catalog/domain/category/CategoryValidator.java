@@ -6,7 +6,7 @@ import com.stream.video.catalog.domain.validation.Validator;
 
 /*
 * Validators can change during time, that's why it is kept
-* separated from the Entity itself.
+* in a separated file from the Entity itself.
 * However, to follow DDD, this CategoryValidator is called from
 * the Entity itself, from a "Validate" method available in Category entity.
 * */
